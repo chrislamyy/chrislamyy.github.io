@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Styles-->
+    <link rel="stylesheet" href="style1.css">
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Contact @ Bluebird</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+    <!--Navbar-->
+    <section id="navigation">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="font-size: 1.5rem">
+                <div class="container">
+                        <a class="navbar-brand" href="#">Bluebird</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                          <ul class="navbar-nav nav-fill w-100">
+                            <li class="nav-item">
+                              <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="rooms.html">Rooms</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item active">
+                                    <a class="nav-link" href="contact.html">Contact<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-primary ml-auto mr-2" style="font-size: 1.5rem">Book</button>
+                            </li>
+                          </ul>
+                        </div>
+                </div>
+                    
+                  </nav>
+            
+    </section>
+
+    <!--Banner section-->
+    <section id="banner-section">
+            <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4 pt-4">Contact Us</h1>
+                        <p class="lead">Do not be shy - we would love to hear from you, so please reach out to us either through telephone, email or our contact form listed below <embed type="image/svg+xml" src="assets/icons/happy (1).svg" style="height: 1.5rem;width:auto;display: inline-block;vertical-align: middle;" /> .</p>
+                    </div>
+                  </div> 
+    </section>
+
+    <!--Location / Contact-->
+    <section class="contact-section">
+            <div class="container pt-5 pb-5">    
+                <div class="row">
+                    <div class="col-md-6 map">
+                        <div id="map"></div>
+                        <!--script for map-->
+                        <script>
+                            function initMap(){
+                                // Map options
+                                var options = {
+                                    zoom: 15,
+                                    center: {lat: -19.996447, lng: 57.588915}
+                                }
+                                // New map
+                                var map = new google.maps.Map(document.getElementById('map'), options);
+    
+                                // Add marker
+                                var marker = new google.maps.Marker({
+                                    position:{lat: -19.996447, lng: 57.588915},
+                                    map: map,
+                                    icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                                })
+                            }
+                        </script>
+                            
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row pb-3">
+                            <div class="col-md-4">
+                                    <span class="badge badge-secondary">address</span>
+                            </div>
+                            <div class="col-md-4">
+                                    <span class="badge badge-secondary">telephone</span>
+                            </div>
+                            <div class="col-md-4">
+                                    <span class="badge badge-secondary">email</span>
+                            </div>
+                        </div>
+                        
+                            <form id="contact-form" name="contact-form">
+                                    <div id="contact-result"></div>
+                                    <div class="form-group">
+                                        <input class="form-control" name="name" placeholder="Your Name" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" name="email" placeholder="Your Email Address" type="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" placeholder="Your Message" style="height:10rem;"></textarea>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary btn-block">Send</button>
+    
+                                </form>
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Footer Section-->
+    <section class="footer-section bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mt-4">
+                        <div class="card text-white bg-dark mb-3 border-0" style="max-width: 18rem;">
+                                <div class="card-body">
+                                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus maxime corporis accusantium ratione quod expedita quisquam debitis veritatis hic voluptate?</p>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                        <div class="card text-white bg-dark mb-3 border-0" style="max-width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Contact Us</h5>
+                                  <ul class="list-unstyled">
+                                      <li>+230 2637036</li>
+                                      <li>contact@bluebird.com</li>
+                                      <li>Old Mill Rd, Pereybere</li>
+                                  </ul>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                        <div class="card text-white bg-dark mb-3 border-0" style="max-width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Useful Links</h5>
+                                  <ul class="list-unstyled">
+                                      <li>
+                                        <a href="about.html">About us</a>
+                                      </li>
+                                      <li>
+                                        <a href="contact.html">Contact us</a>
+                                      </li>
+                                      <li>
+                                            <a href="gallery.html">Gallery</a>
+                                      </li>
+                                        
+                                  </ul>
+                                </div>
+                              </div>                </div>
+            </div>
+
+            <div class="row mt-5 bg-dark">
+                <p class="text-secondary">Copyright and ting 2019 Blue Bird All Rights Reserved none oda den Christopher LAM</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Google Maps JS api script-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqPdHTFX1-FM1oMCGPVGdfw_c7iZtRBj8&callback=initMap"
+async defer></script>
+</body>
+</html>
